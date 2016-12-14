@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!--マスタファイル-->
+    <xsd:element name="states" type="states"/>
+    <!--要素の親-->
+    <xsd:element name="state" type="state"/>
+
+    <!--要素の子-->
+    <xsd:element name="animation" type="animation"/>
+    <xsd:element name="move" type="move"/>
+    <xsd:element name="attack" type="attack"/>
+    <xsd:element name="condition" type="condition"/>
+    
+    <xsd:element name="condition_type_swipe" type="condition_type_swipe"/>
+    <xsd:element name="condition_type_accel" type="condition_type_accel"/>
+    <xsd:element name="condition_type_button" type="condition_type_button"/>
+
+    <xsd:element name="frames" type="frames"/>
+    <xsd:element name="rect" type="rect"/>
+    <xsd:element name="angle" type="angle"/>
+    <xsd:element name="velocity" type="velocity"/>
+    
+    <!--マスタ定義-->
+    <xsd:complexType name="states">
+        <xsd:sequence>
+            <xsd:element ref="state" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!--親要素定義-->
+    <xsd:complexType name="state">
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element ref="animation" minOccurs="1" maxOccurs="1"/>
+	    <xsd:element ref="move" minOccurs="0" maxOccurs="1"/>
+	    <xsd:element ref="attack" minOccurs="0" maxOccurs="1"/>
+	    <xsd:element ref="condition" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="animation">
+      <xsd:sequence>
+	<xsd:element ref="frames"/>
+	<xsd:element name="delay" type="xsd:integer"/>
+	<xsd:element name="repeat" type="xsd:boolean"/>
+      </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="move">
+      <xsd:sequence>
+	<xsd:element ref="velocity"/>
+	<xsd:element name="direction" type="xsd:integer"/>
+      </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="attack">
+      <xsd:sequence>
+	<xsd:element ref="rect"/>
+	<xsd:element name="hit_time" type="xsd:integer"/>
+      </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="condition">
+      <xsd:sequence>
+	<xsd:element name="priority" type="xsd:integer"/>
+    <xsd:element ref="condition_type_swipe" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="condition_type_accel" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="condition_type_button" minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+    </xsd:complexType>
+        
+    <xsd:complexType name="condition_type_swipe">
+        <xsd:sequence>
+            <xsd:element ref="angle" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="degree" type="xsd:float" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="hold" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="condition_type_accel">
+        <xsd:sequence>
+            <xsd:element name="accel_type" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="degree" type="xsd:float" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="above" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="condition_type_button">
+        <xsd:sequence>
+            <xsd:element name="button_name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="frames">
+      <xsd:sequence>
+	<xsd:element name="name" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="rect">
+      <xsd:sequence>
+	<xsd:element name="x" type="xsd:float"/>
+	<xsd:element name="y" type="xsd:float"/>
+	<xsd:element name="width" type="xsd:float"/>
+	<xsd:element name="height" type="xsd:float"/>
+      </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="angle">
+      <xsd:sequence>
+	<xsd:element name="start" type="xsd:float"/>
+	<xsd:element name="end" type="xsd:float"/>
+      </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="velocity">
+      <xsd:sequence>
+	<xsd:element name="x" type="xsd:float"/>
+	<xsd:element name="y" type="xsd:float"/>
+      </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
+

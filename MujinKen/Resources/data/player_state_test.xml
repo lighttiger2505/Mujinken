@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<states
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="player_state_schema.xsd">
+    
+    <state>
+        <name>StateName</name>
+        <animation>
+            <frames>
+                <name>Image1.png</name>
+                <name>Image2.png</name>
+                <name>Image3.png</name>
+                <name>Image4.png</name>
+            </frames>
+            <delay>1</delay>
+            <repeat>true</repeat>
+        </animation>
+        <attack>
+            <rect>
+                <x>1</x>
+                <y>2</y>
+                <width>3</width>
+                <height>4</height>
+            </rect>
+            <hit_time>0</hit_time>
+        </attack>
+        <move>
+            <velocity>
+                <x>0</x>
+                <y>1</y>
+            </velocity>
+            <direction>2</direction>
+        </move>
+        <condition>
+            <priority>0</priority>
+            <condition_type_swipe>
+                <angle>
+                    <start>0</start>
+                    <end>1</end>
+                </angle>
+                <degree>1</degree>
+                <hold>true</hold>
+            </condition_type_swipe>
+        </condition>
+    </state>
+ </states>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<states
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="player_state_schema.xsd">
+
+  <state>
+    <name>Stand</name>
+    <animation>
+      <frames>
+        <name>Stand 1.png</name>
+          <name>Stand 2.png</name>
+          <name>Stand 3.png</name>
+          <name>Stand 4.png</name>
+          <name>Stand 5.png</name>
+          <name>Stand 6.png</name>
+      </frames>
+      <delay>0</delay>
+      <repeat>1</repeat>
+    </animation>
+  </state>
+
+  <state>
+    <name>AttackHighFront</name>
+    <animation>
+      <frames>
+        <name>AttackFrontHigh 1.png</name>
+          <name>AttackFrontHigh 2.png</name>
+          <name>AttackFrontHigh 3.png</name>
+          <name>AttackFrontHigh 4.png</name>
+      </frames>
+      <delay>0</delay>
+      <repeat>true</repeat>
+    </animation>
+      <attack>
+	<rect>
+          <x>68</x>
+          <y>59</y>
+          <width>44</width>
+          <height>42</height>
+        </rect>
+        <hit_time>0</hit_time>
+      </attack>
+      <condition>
+        <priority>20</priority>
+        <condition_type_swipe>
+            <angle>
+              <start>0</start>
+              <end>60</end>
+            </angle>
+            <degree>1</degree>
+            <hold>false</hold>
+        </condition_type_swipe>
+      </condition>
+  </state>
+
+  <state>
+    <name>AttackMiddleFront</name>
+    <animation>
+      <frames>
+        <name>AttackFrontMiddle 1.png</name>
+          <name>AttackFrontMiddle 2.png</name>
+          <name>AttackFrontMiddle 3.png</name>
+          <name>AttackFrontMiddle 4.png</name>
+      </frames>
+      <delay>0</delay>
+      <repeat>false</repeat>
+    </animation>
+      <attack>
+	<rect>
+          <x>75</x>
+          <y>42</y>
+          <width>44</width>
+          <height>18</height>
+        </rect>
+        <hit_time>0</hit_time>
+      </attack>
+      <condition>
+        <priority>20</priority>
+        <condition_type_swipe>
+            <angle>
+              <start>60</start>
+              <end>60</end>
+            </angle>
+            <degree>1</degree>
+            <hold>false</hold>
+        </condition_type_swipe>
+      </condition>
+  </state>
+  <state>
+    <name>AttackLowFront</name>
+    <animation>
+      <frames>
+        <name>AttackFrontLow 1.png</name>
+          <name>AttackFrontLow 2.png</name>
+          <name>AttackFrontLow 3.png</name>
+          <name>AttackFrontLow 4.png</name>
+      </frames>
+      <delay>0</delay>
+      <repeat>false</repeat>
+    </animation>
+      <attack>
+	<rect>
+          <x>77</x>
+          <y>3</y>
+          <width>37</width>
+          <height>23</height>
+        </rect>
+        <hit_time>0</hit_time>
+      </attack>
+      <condition>
+        <priority>20</priority>
+        <condition_type_swipe>
+            <angle>
+              <start>120</start>
+              <end>60</end>
+            </angle>
+            <degree>1</degree>
+            <hold>false</hold>
+        </condition_type_swipe>
+      </condition>
+  </state>
+
+  <state>
+    <name>AttackHighBack</name>
+    <animation>
+      <frames>
+        <name>AttackFrontHigh 1.png</name>
+          <name>AttackFrontHigh 2.png</name>
+          <name>AttackFrontHigh 3.png</name>
+          <name>AttackFrontHigh 4.png</name>
+      </frames>
+      <delay>0</delay>
+      <repeat>false</repeat>
+    </animation>
+    <move>
+      <velocity>
+	<x>0</x>
+	<y>0</y>
+      </velocity>
+      <direction>12</direction>
+      </move>
+      <attack>
+	<rect>
+          <x>68</x>
+          <y>59</y>
+          <width>44</width>
+          <height>42</height>
+        </rect>
+        <hit_time>0</hit_time>
+      </attack>
+      <condition>
+        <priority>20</priority>
+        <condition_type_swipe>
+            <angle>
+              <start>0</start>
+              <end>-60</end>
+            </angle>
+            <degree>1</degree>
+            <hold>false</hold>
+        </condition_type_swipe>
+      </condition>
+  </state>
+
+  <state>
+    <name>AttackMiddleBack</name>
+    <animation>
+      <frames>
+        <name>AttackFrontMiddle 1.png</name>
+          <name>AttackFrontMiddle 2.png</name>
+          <name>AttackFrontMiddle 3.png</name>
+          <name>AttackFrontMiddle 4.png</name>
+      </frames>
+      <delay>0</delay>
+      <repeat>false</repeat>
+    </animation>
+    <move>
+      <velocity>
+	<x>0</x>
+	<y>0</y>
+      </velocity>
+      <direction>12</direction>
+      </move>
+      <attack>
+	<rect>
+          <x>75</x>
+          <y>42</y>
+          <width>44</width>
+          <height>18</height>
+        </rect>
+        <hit_time>0</hit_time>
+      </attack>
+      <condition>
+        <priority>20</priority>
+        <condition_type_swipe>
+            <angle>
+              <start>-60</start>
+              <end>-60</end>
+            </angle>
+            <degree>1</degree>
+            <hold>false</hold>
+        </condition_type_swipe>
+      </condition>
+  </state>
+
+  <state>
+    <name>AttackLowBack</name>
+    <animation>
+      <frames>
+        <name>AttackFrontLow 1.png</name>
+          <name>AttackFrontLow 2.png</name>
+          <name>AttackFrontLow 3.png</name>
+          <name>AttackFrontLow 4.png</name>
+      </frames>
+      <delay>0</delay>
+      <repeat>false</repeat>
+    </animation>
+    <move>
+      <velocity>
+	<x>0</x>
+	<y>0</y>
+      </velocity>
+      <direction>12</direction>
+      </move>
+      <attack>
+	<rect>
+          <x>77</x>
+          <y>3</y>
+          <width>37</width>
+          <height>23</height>
+        </rect>
+        <hit_time>0</hit_time>
+      </attack>
+      <condition>
+        <priority>20</priority>
+        <condition_type_swipe>
+            <angle>
+              <start>-120</start>
+              <end>-60</end>
+            </angle>
+            <degree>1</degree>
+            <hold>false</hold>
+        </condition_type_swipe>
+      </condition>
+  </state>
+  
+  <state>
+    <name>MoveSlowLeft</name>
+    <animation>
+      <frames>
+        <name>MoveSlow 1.png</name>
+          <name>MoveSlow 2.png</name>
+      </frames>
+      <delay>0</delay>
+      <repeat>true</repeat>
+    </animation>
+    <move>
+      <velocity>
+	<x>-5</x>
+	<y>0</y>
+      </velocity>
+      <direction>0</direction>
+      </move>
+      <condition>
+        <priority>10</priority>
+          <condition_type_accel>
+              <accel_type>2</accel_type>
+              <degree>-0.2</degree>
+              <above>false</above>
+          </condition_type_accel>
+      </condition>
+  </state>
+
+  <state>
+    <name>MoveSlowRight</name>
+    <animation>
+      <frames>
+          <name>MoveSlow 1.png</name>
+          <name>MoveSlow 2.png</name>
+      </frames>
+      <delay>0</delay>
+      <repeat>true</repeat>
+    </animation>
+    <move>
+      <velocity>
+	<x>2</x>
+	<y>0</y>
+      </velocity>
+      <direction>1</direction>
+      </move>
+      <condition>
+        <priority>10</priority>
+          <condition_type_accel>
+              <accel_type>2</accel_type>
+              <degree>0.2</degree>
+              <above>true</above>
+          </condition_type_accel>
+      </condition>
+  </state>
+
+  <state>
+    <name>AvoidMiddleFront</name>
+    <animation>
+      <frames>
+        <name>AvoidFront 1.png</name>
+          <name>AvoidFront 2.png</name>
+      </frames>
+      <delay>0</delay>
+      <repeat>0</repeat>
+    </animation>
+    <move>
+      <velocity>
+	<x>2</x>
+	<y>0</y>
+      </velocity>
+      <direction>11</direction>
+      </move>
+      <condition>
+        <priority>30</priority>
+        <condition_type_swipe>
+            <angle>
+              <start>60</start>
+              <end>60</end>
+            </angle>
+            <degree>1</degree>
+            <hold>true</hold>
+        </condition_type_swipe>
+      </condition>
+  </state>
+
+  <state>
+    <name>AvoidMiddleBack</name>
+    <animation>
+      <frames>
+          <name>AvoidFront 1.png</name>
+          <name>AvoidFront 2.png</name>
+      </frames>
+      <delay>0</delay>
+      <repeat>0</repeat>
+    </animation>
+    <move>
+      <velocity>
+	<x>-5</x>
+	<y>0</y>
+      </velocity>
+      <direction>12</direction>
+      </move>
+      <condition>
+        <priority>30</priority>
+        <condition_type_swipe>
+            <angle>
+              <start>-60</start>
+              <end>-60</end>
+            </angle>
+            <degree>1</degree>
+            <hold>true</hold>
+        </condition_type_swipe>
+      </condition>
+  </state>
+
+</states>
